@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Элли-бэлли-бэу</title>
+<style>
+  :root {
+    --bg: #2b1d16;
+    --bg2: #3d2a1e;
+    --gold: #c99a4b;
+    --gold-light: #e8c789;
+    --cream: #f3e9d8;
+    --text-dim: #cbb89a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: radial-gradient(ellipse at top, var(--bg2), var(--bg) 70%);
+    color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 60px;
+  }
+
+  .ornament {
+    width: 100%;
+    max-width: 520px;
+    height: 40px;
+    margin-top: 32px;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--gold) 0 6px,
+      transparent 6px 16px
+    );
+    opacity: 0.35;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  header {
+    text-align: center;
+    max-width: 640px;
+    margin-top: 24px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    color: var(--gold-light);
+    margin: 0 0 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin: 0;
+  }
+
+  section {
+    max-width: 620px;
+    width: 100%;
+    margin-top: 48px;
+  }
+
+  .story {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(201,154,75,0.35);
+    border-radius: 4px;
+    padding: 28px 32px;
+    line-height: 1.75;
+    font-size: 1.05rem;
+  }
+
+  .story p { margin: 0 0 16px; }
+  .story p:last-child { margin-bottom: 0; }
+
+  .photos {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .photos h2, .player h2 {
+    color: var(--gold-light);
+    font-weight: normal;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  .photo-frame {
+    aspect-ratio: 4 / 3;
+    max-width: 420px;
+    margin: 0 auto;
+    border: 2px dashed rgba(201,154,75,0.4);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .player {
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .player-box {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(201,154,75,0.35);
+    border-radius: 4px;
+    padding: 32px;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  .pending {
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-style: italic;
+    max-width: 480px;
+  }
+
+  footer .names {
+    color: var(--gold-light);
+    font-style: normal;
+    font-size: 1.05rem;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="ornament"></div>
+
+<header>
+  <h1>Элли-бэлли-бэу</h1>
+  <p class="subtitle">татарская колыбельная-оберег</p>
+</header>
+
+<section class="story">
+  <div class="story">
+    <p>«Элли-бэлли-бэу» — древний татарский оберег. В этой колыбельной историки фольклора видят сакральную формулу: «Элли» созвучно с обращением к высшим силам, превращая песню в защитный щит.</p>
+    <p>Веками она была своего рода генетическим кодом, передававшим стойкость народа через поколения — через войны и испытания. Сегодня это эхо предков, которое звучит и для вас.</p>
+  </div>
+</section>
+
+<section class="photos">
+  <h2>для наших внучек</h2>
+  <div class="photo-frame">место для фото</div>
+</section>
+
+<section class="player">
+  <h2>послушать</h2>
+  <div class="player-box">
+    <!-- Когда запись будет готова: положить файл lullaby.mp3 рядом с index.html и раскомментировать audio ниже -->
+    <!-- <audio controls src="lullaby.mp3"></audio> -->
+    <p class="pending">запись готовится ♡</p>
+  </div>
+</section>
+
+<footer>
+  <p>с любовью</p>
+  <p class="names">бабушка</p>
+</footer>
+
+</body>
+</html>
