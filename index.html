@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Элли-бэлли-бэу</title>
 <style>
   :root {
@@ -95,18 +96,27 @@
   }
 
   .photo-frame {
-    aspect-ratio: 4 / 3;
     max-width: 420px;
     margin: 0 auto;
     background: #fffdf6;
-    border: 2px dashed rgba(47,107,63,0.4);
+    border: 6px solid #fffdf6;
+    outline: 1px solid rgba(47,107,63,0.3);
     border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(74,55,34,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-dim);
     font-size: 0.9rem;
     font-style: italic;
+    overflow: hidden;
+  }
+
+  .photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
   }
 
   .player {
@@ -168,7 +178,34 @@
 
 <section class="photos">
   <h2>для наших внучек</h2>
-  <div class="photo-frame">место для фото</div>
+  <div class="photo-frame">
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2f4a6b"/>
+          <stop offset="100%" stop-color="#5a3f5e"/>
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#sky)"/>
+      <circle cx="330" cy="55" r="28" fill="#f3e0a0"/>
+      <circle cx="60" cy="40" r="2" fill="#fff"/>
+      <circle cx="110" cy="70" r="1.6" fill="#fff"/>
+      <circle cx="200" cy="35" r="2" fill="#fff"/>
+      <circle cx="250" cy="80" r="1.4" fill="#fff"/>
+      <circle cx="150" cy="55" r="1.4" fill="#fff"/>
+      <path d="M0 220 Q100 180 200 210 T400 200 V300 H0 Z" fill="#3c2a2f"/>
+      <circle cx="150" cy="255" r="34" fill="#b5222a"/>
+      <circle cx="130" cy="248" r="6" fill="#fdf6e8"/>
+      <circle cx="170" cy="248" r="6" fill="#fdf6e8"/>
+      <path d="M124 262 Q150 275 176 262" stroke="#fdf6e8" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="235" cy="262" r="30" fill="#2f6b3f"/>
+      <circle cx="218" cy="256" r="5" fill="#fdf6e8"/>
+      <circle cx="252" cy="256" r="5" fill="#fdf6e8"/>
+      <path d="M212 268 Q235 279 258 268" stroke="#fdf6e8" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M60 300 C60 270 90 260 90 290 C90 260 120 270 120 300 Z" fill="#c9962f"/>
+      <path d="M280 300 C280 270 310 260 310 290 C310 260 340 270 340 300 Z" fill="#c9962f"/>
+    </svg>
+  </div>
 </section>
 
 <section class="player">
